@@ -1,6 +1,5 @@
 /**
- * 3. Escribe un programa en que dado un número del 1 a 7 escriba el correspondiente nombre
- *    del día de la semana.
+ * 10. Escribe un programa que nos diga el horóscopo a partir del día y el mes de nacimiento.
  *
  * @author Eduardo Moreno
  */
