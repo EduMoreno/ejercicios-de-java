@@ -14,7 +14,7 @@ public class Ejercicio14 {
     if ((numero % 2) == 0.0) {
       System.out.println("El número introducido es par");
     } 
-    
+
     else {
       System.out.println("El número introducido es impar");
     }
@@ -23,7 +23,7 @@ public class Ejercicio14 {
       System.out.println(" Es divisible entre 5.");
     
     } 
-    
+
     else {
       System.out.println(" No es divisible entre 5.");
     }
