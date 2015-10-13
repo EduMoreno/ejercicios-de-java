@@ -12,7 +12,7 @@ public class Ejercicio20 {
      int numero;
      boolean cifra = false;
 
-    System.out.printlnºº("Introduzca un número entero de maximo 5 cifras: ");
+    System.out.println("Introduzca un número entero de maximo 5 cifras: ");
     numero = Integer.parseInt(System.console().readLine());
 
     if (numero < 10) {
