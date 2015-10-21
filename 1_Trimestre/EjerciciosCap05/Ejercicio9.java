@@ -13,7 +13,7 @@ public class Ejercicio9 {
     System.out.print("Introduzca un número: ");
     int numero = Integer.parseInt(System.console().readLine());
         
-    while (numero > 10) {
+    while (numero >= 10) {
       numero /= 10;
       digitos++;
     }
