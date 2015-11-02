@@ -16,17 +16,12 @@ public class Ejercicio26 {
       int digito = Integer.parseInt(System.console().readLine());
    
       int girado = 0;
-      int longitud = 0;
       int posicion = 1;
-    
-    if (numero == 0) {
-      longitud = 1;
-    }
     
     do {
           girado = (girado * 10) + (numero % 10);
           numero /= 10;
-          longitud++;
+          
       } while (numero > 0);
       
     do {
