@@ -11,7 +11,7 @@ public class Ejercicio12 {
   public static void main(String[] args) {
   
    int numero = 0;
-      while (numero < 127) {
+      while (numero != 127) {
         numero = (int)(Math.random() * 94 + 32);
         System.out.print("\t" + (char) numero );
       }
