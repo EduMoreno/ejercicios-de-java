@@ -14,7 +14,7 @@ public class Ejercicio10 {
     for(int numLinea = 1; numLinea <= 10; numLinea++) {
       
      int longitudLinea = (int)(Math.random() * 40) + 1;
-     int caracter = (int)(Math.random() * 5 + 1);
+     int caracter = (int)(Math.random() * 6 + 1);
       
       switch(caracter) {
         case 1:
