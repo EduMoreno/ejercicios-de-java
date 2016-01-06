@@ -42,7 +42,7 @@ public class Ejercicio12 {
       for (int n = 0; n < 10; n++) {
         cambio[n] = num[n];
       }
-    
+          
       cambio[posicion2] = num[posicion1];
     
       for (int n = posicion2 + 1; n < 10; n++){

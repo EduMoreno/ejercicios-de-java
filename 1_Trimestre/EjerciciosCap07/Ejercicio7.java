@@ -15,7 +15,7 @@ public class Ejercicio7 {
   int[] num = new int[100];
   
    for ( int n = 0; n < 100; n++){
-     num[n] = (int)(Math.random() * 19);
+     num[n] = (int)(Math.random() * 21);
       System.out.print(num[n] + " ");
     }
     

@@ -18,7 +18,7 @@ public class Ejercicio10 {
     int impares = 0;
  
     for ( int n = 0; n < 20; n++){
-     num[n] = (int)(Math.random() * 99);
+     num[n] = (int)(Math.random() * 101);
       System.out.print(num[n] + " ");
     }
     
