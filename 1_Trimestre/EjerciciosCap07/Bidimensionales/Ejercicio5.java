@@ -21,8 +21,8 @@ public class Ejercicio5 {
     int maxColumna = 0;
     
     
-    for(f = 0; f < 4; f++){
-      for(c = 0; c < 5; c++){
+    for(f = 0; f < 6; f++){
+      for(c = 0; c < 10; c++){
         num[f][c] = (int) (Math.random()* 1001);
         System.out.printf("%4d ", num[f][c]);
   
@@ -43,7 +43,7 @@ public class Ejercicio5 {
     }
     System.out.print("______________________________________________");
     System.out.println();
-    System.out.println("La posicion del numero minimo es " + "Fila " + minFila + " Columna " + minColumna);
-    System.out.println("La posicion del numero maximo es " + " Fila " + maxFila + " Columna " + maxColumna);
+    System.out.println("La posicion del numero minimo " + minimo + " es " + "Fila " + minFila + " Columna " + minColumna);
+    System.out.println("La posicion del numero maximo " + maximo + " es " +" Fila " + maxFila + " Columna " + maxColumna);
   }
 }

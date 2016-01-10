@@ -20,8 +20,8 @@ public class Ejercicio6 {
     int maxColumna = 0;
     boolean numRepetido;
     
-    for(f = 0; f < 4; f++){
-      for(c = 0; c < 5; c++){
+    for(f = 0; f < 6; f++){
+      for(c = 0; c < 10; c++){
         do {
           num[f][c] = (int)(Math.random() * 1001);
           numRepetido = false;
@@ -49,9 +49,10 @@ public class Ejercicio6 {
       }
       System.out.println();
     }
+    
     System.out.print("______________________________________________");
     System.out.println();
-    System.out.println("La posicion del numero minimo es " + "Fila " + minFila + " Columna " + minColumna);
-    System.out.println("La posicion del numero maximo es " + " Fila " + maxFila + " Columna " + maxColumna);
+    System.out.println("La posicion del numero minimo " + minimo + " es " + "Fila " + minFila + " Columna " + minColumna);
+    System.out.println("La posicion del numero maximo " + maximo + " es " +" Fila " + maxFila + " Columna " + maxColumna);
   }
 }
