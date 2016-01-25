@@ -1,0 +1,9 @@
+table, td , tr , th{
+border:1px solid black;
+border-collapse:collapse;
+font-size: 15pt; 
+font-family: Arial;
+margin: auto;
+padding: 10px;
+cell-padding: 5px;
+text-align: center;}
