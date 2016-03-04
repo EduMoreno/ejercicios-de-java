@@ -1,0 +1,17 @@
+3.¿Cuáles serían los atributos de la clase Vivienda ? ¿Qué subclases se te ocurren?
+
+clase Vivienda
+Atributos :
+años 
+metros 
+direccion
+
+subclases:
+
+casa
+
+piso
+
+chale
+
+apartamento
