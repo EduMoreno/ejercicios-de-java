@@ -4,9 +4,7 @@
     Author     : Eduardo Moreno
 --%>
 
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.Connection"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,13 +16,7 @@
   
   <body>
     <%
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/zoo","root", "");
-    Statement bd = conexion.createStatement();
-
-    request.setCharacterEncoding("UTF-8");
-
-  
+     
     String mensaje= " ";
     String enlace= " ";
    
