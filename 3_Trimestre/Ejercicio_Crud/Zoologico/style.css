@@ -23,23 +23,23 @@ table {
     border-top-left-radius: 10px;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
-    
+
     box-shadow: 0px 0 10px 3px black;
-    
+
 }
 
 table.chica {
     margin: 0% 10%;
     width: 30%
-        
+
 }
 
 
 table #trcabecera {
-    
+
     height: 50px;
-    
-    
+
+
 }
 
 #cabecera {
@@ -52,13 +52,11 @@ table #trcabecera {
     border-top: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    
     font-style: normal;
-	font-weight: bold;
-	text-shadow: 1px 1px 4px red;
-    
+    font-weight: bold;
+    text-shadow: 1px 1px 4px red;
     padding: 5px 5px;
-    
+
 }
 
 
@@ -70,17 +68,17 @@ table #trcabecera {
     background-color: #DF0101;
     text-align: center;
     color:white;
-    
+
 }
 
 td.td1 {
-     background-color:#E9E7E7;
-     
-   }
+    background-color:#E9E7E7;
+
+}
 
 td.td2 {
     border-right: 1px solid black;
-   
+
 }
 
 
@@ -89,12 +87,7 @@ td {
     padding-bottom: 5px;
     padding-top: 5px;
     border: 1px solid black;
-     
-}
 
-
-a {
-   text-decoration: none;
 }
 
 form {
@@ -103,19 +96,19 @@ form {
 }
 
 input[type=submit] {
-    
+
     display: inline-block;
     width: 75px;
-    
+
 }
 
 input[type=number] {
-   width: 50px;
+    width: 50px;
 }
 
 input[type=button] {
-    
+
     display: inline-block;
     width: 75px;
-    
+
 }
