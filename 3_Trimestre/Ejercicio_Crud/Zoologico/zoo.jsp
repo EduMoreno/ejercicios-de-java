@@ -48,7 +48,7 @@
             <!-- Alta -->
             <tr>
             <form method="post" action="zoo.jsp">
-                <td class="td1"><input type="number" name="codigo"  maxlength="5"></td>
+                <td class="td1"><input type="number" name="codigo"  maxlength="5" required></td>
                 <td class="td1"><input type="text" name="nombre" maxlength="10"></td>
                 <td class="td1"><input type="text" name="tipoanimal" maxlength="10"></td>
                 <td class="td1"><input type="text" name="genero" size="7" maxlength="12"></td>
