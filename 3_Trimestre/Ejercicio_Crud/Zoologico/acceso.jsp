@@ -18,7 +18,7 @@
         <%
 
            
-            String enlace = " ";
+            String enlace = "";
 
             if (request.getParameter("nombre").equals("administrador") && (request.getParameter("contrasena").equals("1234"))) {
                 out.print("<script type=\"text/javascript\">alert(\"Bienvenido al ZOO  Administrador \");</script>");

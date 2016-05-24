@@ -51,15 +51,35 @@
                 <td class="td1"><input type="number" name="codigo"  maxlength="5" required></td>
                 <td class="td1"><input type="text" name="nombre" maxlength="10"></td>
                 <td class="td1"><input type="text" name="tipoanimal" maxlength="10"></td>
-                <td class="td1"><input type="text" name="genero" size="7" maxlength="12"></td>
-                <td class="td1"><input type="number" name="edad"  maxlength="4"></td> 
+                <td class="td1"><select name='genero'>
+                 <option>Macho</option>
+                 <option>Hembra</option>
+                 <option>Hermafrodita</option>
+                 <option>Sin Sexo</option>
+                </select>
+                </td>
+                <td class="td1"><input type="number" name="edad" min="0"  maxlength="4"></td> 
                 <td class="td1"><input type="text" name="comida" size="7" maxlength="16"></td> 
-                <td class="td1"><select name="cuidador">
-                        <option>25485755D</option>
-                        <option>57894562H</option>
-                        <option>45752365J</option>
-                        <option>54254123P</option>
-                    </select></td>
+                <td class="td1">
+       <%  
+         
+       ResultSet listado3 = bd.executeQuery("SELECT * FROM CUIDADORES");
+         out.println(" <select name='cuidador' required>"); 
+        
+      // continuamos con el select 
+      while (listado3.next()) {  
+     
+         String codigo=listado3.getString("DNI");//guardamos un campo de resultado en una variable 
+         String nombre=listado3.getString("NOMBRE");//guardamos un campo de resultado en una variable 
+
+
+
+         out.println("<option value='"+codigo+"'>" + codigo + "  " + nombre+"</option>");//imprimimos el contenido del select  
+         
+      } 
+
+ out.println("</select></td>"); 
+ %>
                 <td  class="td1"><input type="submit" value="Añadir"></td>
             </form>
             </tr>
@@ -79,13 +99,13 @@
       
       if (coincidencias.getInt(1) != 0) {
         out.print("<script type=\"text/javascript\">alert(\"Lo siento, el codigo " + request.getParameter("codigo") + " ya existe\");</script>");
-      } else if (request.getParameter("codigo")!= null) {
+      }  else if (request.getParameter("codigo")!= null) {
                 
                 String insert = "Insert INTO animales Values ("
                         + Integer.valueOf(request.getParameter("codigo")) +  ", " +
                         "'" + request.getParameter("nombre") + "', ";
                         
-                if (!request.getParameter("tipoanimal").equals(null) && !request.getParameter("tipoanimal").equals("") ) {
+                if (!request.getParameter("tipoanimal").equals("") ) {
                     
                     insert += "'" + request.getParameter("tipoanimal")  + "', ";
                     
@@ -95,7 +115,7 @@
                 
                       insert+= "'" + request.getParameter("genero") + "', ";
                         
-                  if (!request.getParameter("edad").equals(null) && !request.getParameter("edad").equals("") ) {
+                  if ((!request.getParameter("edad").equals("")) && !request.getParameter("edad").equals("<0")) {
                     
                      insert += Integer.valueOf(request.getParameter("edad"))  + ", ";
                     
@@ -105,12 +125,10 @@
                       
                       insert+=  "'" + request.getParameter("comida") + "', " +
                         "'" + request.getParameter("cuidador") + "')";
-                
-                
-                bd.execute(insert);
-                
-              }            
             
+                bd.execute(insert);
+          
+      }      
           
              // Borrado 
           
@@ -149,10 +167,23 @@
                             "<input type=\"number\" name=\"codigo1\" readonly maxlength=\"5\"  value=\"" + request.getParameter("codigo2") + "\"></td>" + 
                             "<td><input type=\"text\" name=\"nombre1\" maxlength=\"10\" value=\"" + request.getParameter("nombre2") + "\"></td>" + 
                             "<td><input type=\"text\" name=\"tipoanimal1\" maxlength=\"10\" value=\"" + request.getParameter("tipoanimal2") + "\"></td>" +
-                            "<td><input type=\"text\" name=\"genero1\" maxlength=\"12\" size=\"7\" value=\"" + request.getParameter("genero2") + "\"></td>" +
-                            "<td><input type=\"number\" name=\"edad1\" maxlength=\"4\" value=\"" + request.getParameter("edad2") + "\"></td>" +
+                            "<td><select name=\"genero1\">");
+                             if (request.getParameter("genero2").equals("Macho")){
+                             out.print("<option>Macho</option><option>Hembra</option><option>Hermafrodita</option><option>Sin Sexo</option></select></td>");
+                             }
+                            if (request.getParameter("genero2").equals("Hembra")){
+                             out.print("<option>Hembra</option><option>Macho</option><option>Hermafrodita</option><option>Sin Sexo</option></select></td>");
+                              }
+                             if (request.getParameter("genero2").equals("Hermafrodita")){
+                             out.print("<option>Hermafrodita</option><option>Macho</option><option>Hembra</option><option>Sin Sexo</option></select></td>");
+                              }
+                         
+                             if (request.getParameter("genero2").equals("Sin Sexo")){
+                             out.print("<option>Sin Sexo</option><option>Macho</option><option>Hembra</option><option>Hermafrodita</option></select></td>");
+                              } 
+                            out.print("<td><input type=\"number\" name=\"edad1\" maxlength=\"4\" min=0  value=\"" + request.getParameter("edad2") + "\" required></td>" +
                             "<td><input type=\"text\" name=\"comida1\" maxlength=\"16\"size=\"7\" value=\"" + request.getParameter("comida2") + "\"></td>" +
-                            "<td><select name=\"cuidador1\">");
+                           "<td><select name=\"cuidador1\">");
                             if (request.getParameter("cuidador2").equals("25485755D")){
                              out.print("<option>25485755D</option><option>57894562H</option><option>45752365J</option><option>54254123P</option>");
                              }
@@ -167,11 +198,11 @@
                              out.print("<option>54254123P</option><option>25485755D</option><option>57894562H</option><option>45752365J</option>");
                               }
 
-                           out.print("<td class=\"td2\"><input type=\"hidden\" name=\"update\" value=\"modifica\">" +
-                                    "<input type=\"submit\" value=\"Aceptar\">" + 
-                                    "<a href=\"zoo.jsp\"><input type=\"button\" value=\"Cancelar\"></a>" + 
-                                    "</td></form></tr>");
-                            
+                        out.print("<td class=\"td2\"><input type=\"hidden\" name=\"update\" value=\"modifica\">"
+                                  + "<input type=\"submit\" value=\"Aceptar\">"
+                                  + "<a href=\"zoo.jsp\"><input type=\"button\" value=\"Cancelar\"></a>"
+                                  + "</td></form></tr>");
+
                 } else {
                 
                     out.println("<tr>" + "<td class=\"td1\">" + listado.getString("COD_ANIMAL") + "</td>" +
