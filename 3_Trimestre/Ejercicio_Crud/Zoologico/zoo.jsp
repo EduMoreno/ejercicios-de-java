@@ -185,17 +185,17 @@
                             "<td><input type=\"text\" name=\"comida1\" maxlength=\"16\"size=\"7\" value=\"" + request.getParameter("comida2") + "\"></td>" +
                            "<td><select name=\"cuidador1\">");
                             if (request.getParameter("cuidador2").equals("25485755D")){
-                             out.print("<option>25485755D</option><option>57894562H</option><option>45752365J</option><option>54254123P</option>");
+                             out.print("<option value=\"25485755D\">25485755D Jesús</option><option  value=\"57894562H\">57894562H Jennifer</option><option  value=\"45752365J\">45752365J Miriam</option><option value=\"54254123P\">54254123P Antonio</option>");
                              }
                             if (request.getParameter("cuidador2").equals("57894562H")){
-                             out.print("<option>57894562H</option><option>25485755D</option><option>45752365J</option><option>54254123P</option>");
+                             out.print("<option  value=\"57894562H\">57894562H Jennifer</option><option value=\"25485755D\">25485755D Jesús</option><option  value=\"45752365J\">45752365J Miriam</option><option value=\"54254123P\">54254123P Antonio</option>");
                               }
                              if (request.getParameter("cuidador2").equals("45752365J")){
-                             out.print("<option>45752365J</option><option>25485755D</option><option>57894562H</option><option>54254123P</option>");
+                             out.print("<option  value=\"45752365J\">45752365J Miriam</option><option value=\"25485755D\">25485755D Jesús</option><option  value=\"57894562H\">57894562H Jennifer</option><option value=\"54254123P\">54254123P Antonio</option>");
                               }
                          
                              if (request.getParameter("cuidador2").equals("54254123P")){
-                             out.print("<option>54254123P</option><option>25485755D</option><option>57894562H</option><option>45752365J</option>");
+                             out.print("<option value=\"54254123P\">54254123P Antonio</option><option value=\"25485755D\">25485755D Jesús</option><option  value=\"57894562H\">57894562H Jennifer</option><option  value=\"45752365J\">45752365J Miriam</option>");
                               }
 
                         out.print("<td class=\"td2\"><input type=\"hidden\" name=\"update\" value=\"modifica\">"
